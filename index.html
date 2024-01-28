@@ -1,0 +1,405 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+        
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+   
+   <link rel="stylesheet" href="css/tablet.css"media="screen and (max-width:800px)">
+   <link rel="stylesheet" href="css/phone.css"media="screen and (max-width:530px)">
+
+   
+   
+   <style>
+       *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        
+        .nav{
+            background-color: burlywood;
+            color: antiquewhite;
+            height: 30% ;
+            margin-top:px ;
+            width: 1 vw;
+            padding: 10px;
+            position:sticky;
+            top:0;
+            
+        }
+        li{
+            display: inline;
+            margin: 25px;
+            padding: 7px;
+            font-size: 1vw;
+            text-align: center;
+
+        }
+        ul li a:active{
+            color: blue;
+        }
+        ul li link:visited{
+            color: gold;
+        }
+        ul li a:hover{
+            cursor: pointer;
+            color:violet;
+
+            font-weight: bold;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            
+
+        }
+    
+        h1{
+            margin-top:80px;
+            font-size: 6;
+            font-family: 'Times New Roman', Times, serif;
+            color: blue;
+        }
+        #home{
+            display: flex;
+            flex-direction: column;
+            height: 700px; 
+            justify-content: center;
+        }#home::before{
+            content: "";
+            position: absolute;
+            right: 0;
+            background: url(images/body.png)no-repeat center center/cover;
+            height: 750px;
+            width: 100%;
+            z-index: -1;
+            opacity: .8;
+        }
+        .image-box{
+            height: 500px;
+            width: 400px;
+            border-radius:0px 120px 50px 0px;
+            background-image: url(images/home.png);
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 700px;
+            top: 200px;
+            z-index: -1;
+        }
+        .image-box:hover{
+            opacity: 0.3;
+        }
+        #main{
+            margin-top: 8px;
+            margin-left:100px;
+        }
+        #main h1{
+            font-size: 50px;
+            font-family: Tempus Sans ITC;
+            color: #212121;
+            margin-bottom: 30px;
+
+        }
+        span{
+            color: orange;
+        }
+        #main p{
+            color:blueviolet;
+            line-height: 22px;
+        }
+        .headings{
+            font-family: century;
+            font-size: 2rem;
+            color:blueviolet;
+        }
+        .btn{
+            padding: 10px 35px;
+            background-color: royalblue;
+            border: 1px solid whitesmoke;
+            color: rgb(73, 59, 59);
+            outline: none;
+            transition: .6s ease;
+            text-decoration: none;
+
+        }
+        .btn:hover{
+            cursor: pointer;
+            background-color: royalblue;
+            color: black;
+            box-shadow: 0 0 5px black,0 0 10px black,0 0 15px black;
+            font-weight: bold;
+        }
+        #h2{
+            text-align: center;
+            color:yellowgreen;
+        }
+    
+        /* .image:hover{opacity: 0.3; } */
+    
+        ul{
+            margin-left: 500px;
+
+        }  
+        /*About section*/
+        #about{
+               display:flex ;
+               flex-direction: column;
+               box-sizing: border-box;
+               padding: 20px;
+               margin-bottom: 50px;
+               background-color: aqua;
+        }
+        h1.headings{
+             text-align: justify;
+            font-size: 2rem;
+        }
+        #pic{
+            display: flex;
+           
+        }
+        #pic img{
+            width: 350px;
+            height: 400px;
+
+        }
+        #about p{
+            margin: 10px;
+        }
+      
+
+       /*Portfolio section*/
+
+       #portfolio{
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(0,0,0,0.9);
+        color: white;
+        align-items: center;
+        padding: 20px;
+
+       }
+       .gallery{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        box-sizing: border-box;
+
+       }
+       .gallery img{
+        width: 360px;
+        height: 250px;
+        margin: 10px;
+       }
+
+       /*servives section*/
+       #services{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+       }
+       .row{
+        display: flex;
+
+       }
+       .box{
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        height: 450px;
+        border: 1px solid black;
+        margin: 10px;
+        align-items: justify;
+        text-align: justify;
+        padding: 10px;
+        border-radius: 15px;
+        background: linear-gradient(to top,rgb(255,45,45) 50%,white 50%);
+        background-size: 100% 200%;
+        transition: all.8s;
+        justify-content: space-around;
+
+       }
+       .box:hover{
+        background-position: left bottom;
+        color: white;
+        border: none;
+        box-shadow: 0 0 20px rgb(255,45, 45);
+       }
+       .box img{
+        width: 80px;
+        height: 80px;
+        background-color: white;
+        padding: 10px;
+       }
+
+       /*Contact  Section */
+       #contact{
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        background-color: rgb(0,0,0.9);
+        color: white;
+        padding: 20px;
+        align-items:center;
+       }
+       .form{
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        align-items: center;
+        margin: 20px 0px;
+       }
+       .input{
+        padding: 12px;
+        margin: 15px;
+        width: 100%;
+        border: none;
+        outline: none;
+        align-items: center;
+       }
+       #msg{
+        width: 20%;
+        padding: 10px;
+        margin: 20px;
+        border: none;
+        outline: none;
+       }
+       #send{
+        padding: 10px;
+        width: 30%;
+        margin: 40px;
+        border: none;
+        outline: none;
+        color: black;
+
+       }
+       #send:hover{
+              cursor: pointer;
+              box-shadow: 0 0 1px white;
+       }
+       #foot{
+        background-color: cadetblue;
+        height: 150px;
+       }
+</style>
+</head>
+<body>
+    
+    <header class="nav">
+    <h2 style="color:orchid ; font-family:'Times New Roman', Times, serif;"> shubham <span style="color: red;">futane</span></h2>
+          <ul >
+            <li class="nav-link active"> <a href=#home">Home</a> </li>
+            <li class="nav-link active"><a href="#about">About</a></li>
+            <li class="nav-link active"><a href="#portfolio">Portfolio</a></li>
+            <li class="nav-link active"><a href="#services">Services</a></li>
+            <li class="nav-link active"><a href="#contact">Contact</a></li>
+            <li class="nav-link active"><a href="mailto:shubhamfutane122@gamil.com"style="border-radius:white;background-color:green">Email me</a></li>
+            
+        </ul>
+    </header>
+ 
+ <section id="home">
+    <div class="image-box"><img src=""></div>
+    <div id="main">
+     <h1>I am Shubham<span>Futane</span> </h1>
+     <p>This is my official Portfolio Website to shows all
+        Details and work <br> experience webdevlopment
+     </p>
+      
+     <button class="btn"><a href=".com">Download cv</a></button>
+       
+    </div>
+    </section>
+    
+     <!--About section-->
+     <section id="about">
+        <h1 class="headings"><center>About me </center></h1>
+        <div id="pic">
+            <img src="images/img2.jpg" alt="">
+            <div id="intro">
+                <h2 style="font-weight: bolder;">Shubham Ganesh Futane</h2>
+                
+               <p>I am shubham futane I'm currently studying ug course Bachelor of computer application in a srtm university nanded . I'm looking for promising opportunity an major IT companies in India in the field of software engineering and technology. 
+                I recently completed a web development/Android development course from Cocsit tpc , which has given me the latest skills and knowledge in the web development industry. I also worked as a web developer intern at XYZ Company, where I learned practical skills in building websites for clients.
+                
+                My focus is on designing and developing websites/Applications that look great and work well. I am skilled in a range of programming languages and platforms, including HTML, CSS, JavaScript, and WordPress. I have worked on websites for different industries, such as Blogging, finance, e- commerce, and education.
+                
+                I enjoy working with other web developers /Android app developers and designers to make websites/App that match the client's brand and business objectives. I am committed to keeping up with the latest industry trends and best practices, and I attend professional web development & Android app development courses to improve my skills.
+                
+                My goal is to create websites/Android app that are both visually appealing and easy to use. I take pride in exceeding client expectations and delivering projects on time.
+                
+                If you are looking for a web developer/Android devloper with skills and experience, please feel free to get in touch with me.</p>
+            </div>
+        </div>
+
+     </section>
+
+      <section id="portfolio">
+        <h1>PORTFOLIO</h1>
+        <div class="gallery">
+            <img src="images/p3.jpg" alt="">
+            <img src="images/p2.jpg" alt="">
+            <img src="images/p4.jpg" alt="">
+            <img src="images/p7.jpg" alt="">
+            <img src="images/p6.jpg" alt="">
+            <img src="images/p5.jpg" alt="">
+
+        </div>
+      </section>
+
+
+      <sectio id="services">
+        <h1 class="headings"><center>SERVICES</center></h1>
+        <div class="row">
+            <div class="box">
+                <h1 class="headings"><center>Website Design</center></h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam ad distinctio voluptatum voluptates, dolores veniam numquam a totam qui cum perspiciatis, excepturi blanditiis voluptate? Ut veritatis numquam voluptatibus sit nobis.</p>
+            </div>
+            <div class="box">
+                <h1 class="headings"><center>UX/UI Design</center></h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam ad distinctio voluptatum voluptates, dolores veniam numquam a totam qui cum perspiciatis, excepturi blanditiis voluptate? Ut veritatis numquam voluptatibus sit nobis.</p>
+            </div>
+            <div class="box">
+                <!-- <img src="images/" alt=""> -->
+                <h1 class="headings"><center>Digital Marketing</center></h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam ad distinctio voluptatum voluptates, dolores veniam numquam a totam qui cum perspiciatis, excepturi blanditiis voluptate? Ut veritatis numquam voluptatibus sit nobis.</p>
+            </div>
+            <!-- / -->
+            <div class="box">
+                <!-- <img src="images/" alt=""> -->
+                <h1 class="headings"><center>Android-Devlopment</center></h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam ad distinctio voluptatum voluptates, dolores veniam numquam a totam qui cum perspiciatis, excepturi blanditiis voluptate? Ut veritatis numquam voluptatibus sit nobis.</p>
+            </div>
+        </div>
+      </sectio>
+
+      <section id="contact">
+        <h1>CONTACT</h1>
+        <form action="">
+            <input type="text"name="name"class="input" placeholder="Enter Your Name"><br>
+            <input type="email"name="email"class="input" placeholder="Enter Your Mail"><br>
+            <textarea name="msg" id="" cols="50" rows="5"placeholder="Enter Your Message"></textarea><br>
+            <input type="submit"value="SEND"id="send">
+
+        </form>
+      </section>
+
+
+      <footer id="foot">
+        <center><p>copy@Shubhamfutane</p></center>
+      </footer>
+</body>
+</html>
